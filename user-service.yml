@@ -23,9 +23,9 @@ logging.level.org.springframework.security: DEBUG
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://192.168.99.100:3306/dev
-    username: root
-    password: dbpass
+    uri: jdbc:mysql://127.0.0.1:3306/pivotal
+    username: pivotal
+    password: Changeme1!
     initialize: true
 security.ignored: /resources/**
 ---
