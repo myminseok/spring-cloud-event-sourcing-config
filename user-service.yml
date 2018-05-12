@@ -1,6 +1,11 @@
 spring:
   profiles:
     active: development
+
+
+management.security.enabled: false
+security.basic.enabled: false
+
 ---
 server:
   contextPath: /uaa
