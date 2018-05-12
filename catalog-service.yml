@@ -7,6 +7,10 @@ spring:
   redis:
     host: ${vcap.services.catalog-redis.credentials.hostname:localhost}
     port: ${vcap.services.catalog-redis.credentials.port:6379}
+    
+management.security.enabled: false
+security.basic.enabled: false
+
 ---
 spring:
   profiles: development
