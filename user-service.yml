@@ -8,6 +8,7 @@ security:
   user:
     password: password
   enable-csrf: false
+  oauth2.resource.filter-order: 3
 spring:
   profiles: cloud
 security.ignored: /resources/**
