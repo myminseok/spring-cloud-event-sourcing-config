@@ -44,8 +44,8 @@ zuul:
     auth-service:
       path: /user/**
       url: http://localhost:8181/uaa
-    user-service:
-      path: /users/**
+    # user-service:
+    #   path: /users/**
 security:
   enable-csrf: false
   oauth2:
