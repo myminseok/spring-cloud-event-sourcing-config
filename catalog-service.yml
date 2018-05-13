@@ -7,21 +7,18 @@ spring:
   redis:
     host: ${vcap.services.catalog-redis.credentials.hostname:localhost}
     port: ${vcap.services.catalog-redis.credentials.port:6379}
-    
-management.security.enabled: false
-security.basic.enabled: false
 
 ---
 spring:
   profiles: development
   redis:
-    host: 192.168.99.100
+    host: 127.0.0.1
     port: 6379
   datasource:
-    url: jdbc:mysql://192.168.99.100:3306/dev?useSSL=false
-    username: root
+    url: jdbc:mysql://127.0.0.1:3306/catalog-db?useSSL=false
+    username: pivotal
     password: dbpass
-    initialize: false
+    initialize: true
 eureka:
   instance:
     prefer-ip-address: true

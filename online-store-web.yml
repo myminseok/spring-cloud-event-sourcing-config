@@ -29,6 +29,8 @@ security:
       clientSecret: acmesecret
   ignored: /assets/**
 ---
+
+
 spring:
   profiles: development
   application:
@@ -41,7 +43,7 @@ zuul:
       url: http://localhost:9999
     auth-service:
       path: /user/**
-      url: http://localhost:8181/uaa/user
+      url: http://localhost:8181/uaa
     user-service:
       path: /users/**
 security:

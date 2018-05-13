@@ -3,3 +3,8 @@ info:
 logging:
   level:
     org.springframework.security: DEBUG
+management.security.enabled: false
+security:
+  basic.enabled: false
+  oauth2.resource.filter-order: 3
+

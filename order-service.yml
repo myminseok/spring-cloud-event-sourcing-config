@@ -2,10 +2,6 @@ spring.profiles.active: development
 ---
 spring:
   profiles: cloud
-  data:
-    mongodb:
-      host: ${vcap.services.order-db.credentials.hostname:localhost}
-      port: ${vcap.services.order-db.credentials.port:27017}
   mvc:
     date-format: "YYYY-MM-dd"
   jackson:
@@ -21,6 +17,11 @@ security:
 ---
 spring:
   profiles: development
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/order-db?useSSL=false
+    username: pivotal
+    password: dbpass
+    initialize: true
   data:
     mongodb:
       host: 192.168.99.100

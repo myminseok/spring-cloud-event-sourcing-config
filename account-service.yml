@@ -14,10 +14,10 @@ security:
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://192.168.99.100:3306/dev
-    username: root
+    url: jdbc:mysql://127.0.0.1:3306/account-db
+    username: pivotal
     password: dbpass
-    initialize: false
+    initialize: true
 security:
   oauth2:
     resource:

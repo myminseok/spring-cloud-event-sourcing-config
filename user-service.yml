@@ -19,11 +19,11 @@ security:
   user:
     password: password
   enable-csrf: false
-logging.level.org.springframework.security: DEBUG
+  oauth2.resource.filter-order: 3
 spring:
   profiles: development
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/pivotal
+    url: jdbc:mysql://127.0.0.1:3306/user-db
     username: pivotal
     password: dbpass
     initialize: true
